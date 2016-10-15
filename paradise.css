@@ -3,6 +3,10 @@ body {
     color: #FFF;
 }
 
+p.center {
+    text-align:center;
+}
+
 div.main {
     border-style: solid;
     border-color: #C80000;
