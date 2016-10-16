@@ -15,7 +15,9 @@
 
         let scene = new Scene(this.script.scenes.vaginal, this.canvas);
 
-        scene.play();
+        scene.play()
+            .then(() => console.log('done'))
+            .catch((e) => console.error(e));
 
     };
 
