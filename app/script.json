@@ -1,0 +1,61 @@
+{
+    "scenes": {
+        "vaginal": {
+            "frames": {
+                "vaginal_initial": [
+                    "room",
+                    "vaginal_base",
+                    "vaginal_frame1"
+                ],
+                "vaginal_frame1": [
+                    "vaginal_frame1"
+                ],
+                "vaginal_frame2": [
+                    "vaginal_frame2"
+                ],
+                "vaginal_balloon_venho": [
+                    "vaginal_balloon_venho"
+                ]
+            },
+            "roll": [
+                {
+                    "frame": "vaginal_initial",
+                    "duration": 750
+                },
+                [
+                    {
+                        "repeat": 19
+                    },
+                    {
+                        "frame": "vaginal_frame1",
+                        "duration": 750
+                    },
+                    {
+                        "frame": "vaginal_frame2",
+                        "duration": 750
+                    }
+                ],
+                {
+                    "frame": "vaginal_balloon_venho"
+                },
+                [
+                    {
+                        "repeat": 6
+                    },
+                    {
+                        "frame": "vaginal_frame1",
+                        "duration": 750
+                    },
+                    {
+                        "frame": "vaginal_frame2",
+                        "duration": 750
+                    }
+                ],
+                {
+                    "frame": "vaginal_initial",
+                    "duration": 2500
+                }
+            ]
+        }
+    }
+}

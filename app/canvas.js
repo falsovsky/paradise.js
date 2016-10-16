@@ -2,7 +2,6 @@
 
     'use strict';
 
-
     let Canvas = function(container, width, height) {
 
         this.container = container;
@@ -30,7 +29,7 @@
 
     };
 
-    Canvas.prototype.showImage = function(name) {
+    Canvas.prototype.drawImage = function(name) {
 
         if (!(name in this.images)) {
             throw new Error('image ' + name + ' unknown');
