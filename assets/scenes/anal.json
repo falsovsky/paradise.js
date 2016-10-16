@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "anal_initial": [
+      "room",
+      "anal_base",
+      "anal_frame1"
+    ],
+    "anal_frame1": [
+      "anal_frame1"
+    ],
+    "anal_frame2": [
+      "anal_frame2"
+    ],
+    "anal_balloon_grosso": [
+      "anal_balloon_grosso"
+    ],
+    "anal_balloon_clear": [
+      "anal_balloon_clear"
+    ],
+    "anal_balloon_aaaa": [
+      "anal_balloon_aaaa"
+    ],
+    "anal_balloon_grosso_aaaa": [
+      "anal_balloon_grosso",
+      "anal_balloon_aaaa"
+    ]
+  },
+  "roll": [
+    {
+      "name": "anal_initial",
+      "duration": 750
+    },
+    {
+      "repeat": 10,
+      "roll": [
+        {
+          "name": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "name": "anal_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "name": "anal_balloon_grosso"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "name": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "name": "anal_frame2",
+          "duration": 250
+        }
+      ]
+    },
+    {
+      "name": "anal_balloon_clear"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "name": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "name": "anal_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "name": "anal_balloon_aaaa"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "name": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "name": "anal_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "name": "anal_balloon_grosso_aaaa"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "name": "anal_frame1",
+          "duration": 100
+        },
+        {
+          "name": "anal_frame2",
+          "duration": 100
+        }
+      ]
+    }
+  ]
+}

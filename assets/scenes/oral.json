@@ -1,0 +1,53 @@
+{
+  "frames": {
+    "oral_initial": [
+      "room",
+      "oral_base",
+      "oral_frame1"
+    ],
+    "oral_frame1": [
+      "oral_frame1"
+    ],
+    "oral_frame2": [
+      "oral_frame2"
+    ],
+    "oral_balloon_chupa": [
+      "oral_balloon_chupa"
+    ]
+  },
+  "roll": [
+    {
+      "name": "oral_initial",
+      "duration": 750
+    },
+    {
+      "repeat":20,
+      "roll": [
+        {
+          "name": "oral_frame1",
+          "duration": 250
+        },
+        {
+          "name": "oral_frame2",
+          "duration": 250
+        }
+      ]
+    },
+    {
+      "name": "oral_balloon_chupa"
+    },
+    {
+      "repeat": 10,
+      "roll": [
+        {
+          "name": "oral_frame1",
+          "duration": 150
+        },
+        {
+          "name": "oral_frame2",
+          "duration": 150
+        }
+      ]
+    }
+  ]
+}
