@@ -1,0 +1,71 @@
+{
+    "vaginal": {
+        "frames": [
+            {
+                "name": "vaginal_initial",
+                "images": [
+                    "room",
+                    "vaginal_base",
+                    "vaginal_frame1"
+                ]
+            },
+            {
+                "name": "vaginal_frame1",
+                "images": [
+                    "vaginal_frame1"
+                ]
+            },
+            {
+                "name": "vaginal_frame2",
+                "images": [
+                    "vaginal_frame2"
+                ]
+            },
+            {
+                "name": "vaginal_balloon_venho",
+                "images": [
+                    "vaginal_balloon_venho"
+                ]
+            }
+        ],
+        "scene": [
+            {
+                "frame": "vaginal_initial",
+                "duration": 750
+            },
+            [
+                {
+                    "repeat": 19
+                },
+                {
+                    "frame": "vaginal_frame1",
+                    "duration": 750
+                },
+                {
+                    "frame": "vaginal_frame2",
+                    "duration": 750
+                }
+            ],
+            {
+                "frame": "vaginal_balloon_venho"
+            },
+            [
+                {
+                    "repeat": 6
+                },
+                {
+                    "frame": "vaginal_frame1",
+                    "duration": 750
+                },
+                {
+                    "frame": "vaginal_frame2",
+                    "duration": 750
+                }
+            ],
+            {
+                "frame": "vaginal_initial",
+                "duration": 2500
+            }
+        ]
+    }
+}

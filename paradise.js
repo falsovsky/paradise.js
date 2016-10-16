@@ -46,14 +46,14 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
     canvas.setAttribute('height', canvasHeight);
     canvas.setAttribute('id', 'canvas');
     canvasDiv.appendChild(canvas);
-    
+
     if(typeof G_vmlCanvasManager != 'undefined') {
         canvas = G_vmlCanvasManager.initElement(canvas);
     }
     context = canvas.getContext("2d"); // Grab the 2d canvas context
     // Note: The above code is a workaround for IE 8and lower. Otherwise we could have used:
     //     context = document.getElementById('canvas').getContext("2d");
-    
+
     window.addEventListener('keydown', doKeyDown, true);
 
     var myImages = [
@@ -80,7 +80,7 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
 function loadImage(name)
 {
     images[name] = new Image();
-    images[name].onload = function() { 
+    images[name].onload = function() {
         resourceLoaded();
     }
     images[name].src = name + ".png";
