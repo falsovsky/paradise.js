@@ -32,7 +32,7 @@ div.center {
 
 @media only screen and (max-width:512px) {
     div.main {
-        zoom: 0.7;
+        zoom: 0.6;
     }
 }
 
