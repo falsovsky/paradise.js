@@ -65,6 +65,7 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
      * @author: cc
      * Do device validation, fix layout and assign their events
      */
+
     //Check device
     if( navigator.userAgent.match(/Android/i) ||
         navigator.userAgent.match(/iPhone|iPad|iPod/i) ||
