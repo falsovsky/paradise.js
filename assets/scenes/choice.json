@@ -1,0 +1,42 @@
+{
+  "frames": {
+    "choice_initial": [
+      "room",
+      "whore",
+      "hero",
+      "choice_balloon_queres"
+    ],
+    "choice_anal": [
+        "choice_balloon_anal"
+    ],
+    "choice_vaginal": [
+        "choice_balloon_vaginal"
+    ],
+    "choice_oral": [
+        "choice_balloon_oral"
+    ]
+  },
+  "roll": [
+    { "name": "choice_initial" }
+  ],
+  "choices": {
+    "anal": [
+      {
+        "name": "choice_anal",
+        "duration": 750
+      }
+    ],
+    "vaginal": [
+      {
+        "name": "choice_vaginal",
+        "duration": 750
+      }
+    ],
+    "oral": [
+      {
+        "name": "choice_oral",
+        "duration": 750
+      }
+    ]
+  }
+}

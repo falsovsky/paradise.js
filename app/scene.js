@@ -8,6 +8,7 @@
 
         this.frames = scene.frames;
         this.roll = scene.roll;
+        this.choices = scene.choices;
         this.canvas = canvas;
 
     };
@@ -22,7 +23,10 @@
         });
     };
 
-    Scene.prototype.play = function() {
+    /* if called with no arguments, it will render the scene specified in this.roll
+     * otherwise it will render the roll specified in choices, with the key name
+     * given as argument */
+    Scene.prototype.play = function(choice) {
 
         /* transform a scene roll array into a flat array of simple
          * scene objects ({ name, duration }), repeating as needed  */
@@ -71,7 +75,8 @@
 
         };
 
-        let expanded = expand(this.roll);
+        let scene = choice ? this.choices[choice] : this.roll;
+        let expanded = expand(scene);
         let functionalized = functionalize(expanded);
 
         console.log(functionalized);
