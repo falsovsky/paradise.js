@@ -1,6 +1,7 @@
 body {
     background-color: #0000C8;
     color: #FFF;
+    overflow: hidden;
 }
 
 p.center {
@@ -17,5 +18,21 @@ div.center {
     width: 512px;
     padding: 0;
     margin: 0 auto;
+}
+
+/*MOBILE STUFF*/
+#touch-elems li {
+
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+
+    cursor: pointer;
+}
+
+@media only screen and (max-width:512px) {
+    div.main {
+        zoom: 0.7;
+    }
 }
 
