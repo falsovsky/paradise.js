@@ -29,16 +29,10 @@ div.center {
     cursor: pointer;
 }
 
-@media only screen and (orientation:portrait) {
+@media only screen and (max-width:512px) {
     div.main {
         zoom: 0.7;
         -moz-transform: scale(0.7);
-    }
-}
-@media only screen and (orientation:landscape) {
-    div.main {
-        zoom: 1;
-        -moz-transform: scale(1);
     }
 }
 
