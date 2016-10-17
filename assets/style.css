@@ -3,15 +3,24 @@ body {
     color: #FFF;
 }
 
-div.main {
+div#canvasDiv {
     border-style: solid;
     border-color: #C80000;
     height: 272px;
 }
 
-div.center {
+div#canvasDiv, div#titleDiv, div#infoDiv {
     width: 512px;
     padding: 0;
     margin: 0 auto;
+}
+
+div#titleDiv {
+    text-align:center;
+    margin: 20px auto;
+}
+
+div#infoDiv {
+    margin: 20px auto;
 }
 
