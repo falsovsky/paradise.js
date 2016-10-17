@@ -7,9 +7,13 @@
 
     let Director = function(canvas) {
 
+        /* html5 canvas */
         this.canvas = canvas;
 
-        /* load scenes */
+        /* load scenes dynamically from all .json files present in '../assets/scenes'.
+         * this function implements a reducer that reduces all files loaded to a
+         * single object with the scene filename minus extension as key and
+         * the require()d file as value */
         const requireScenes = function (requireContext) {
             return requireContext.keys().reduce(function(accumulator, filename) {
                 let framename = filename.match(/\.\/(\S+)\.json$/)[1];
@@ -17,9 +21,9 @@
                 return accumulator;
             }, {});
         };
-        let scenes = requireScenes(require.context("../assets/scenes", true, /\.json$/));
+        let scenes = requireScenes(require.context('../assets/scenes', true, /\.json$/));
 
-        /* map object with scene definitions (with scene name as key) into object
+        /* map object with scene definitions obtained above into object
          * containing Scene objects with scene name as a key */
         this.scenes = _.mapValues(scenes, (value, key) => {
             return new Scene(value, this.canvas);
@@ -27,15 +31,22 @@
 
     };
 
+    /*  begins the game */
     Director.prototype.begin = function() {
 
+        /* consequence of user action (key pressed) */
         let choice = (scene) => {
             window.removeEventListener('keydown', listener, true);
+
+            /* play the selected choice screen */
             this.scenes.choice.play(scene)
+                /* then play the chosen scene */
                 .then(this.scenes[scene].play.bind(this.scenes[scene]))
+                /* then start all over again */
                 .then(main);
         };
 
+        /* keydown window event listener */
         let listener = (event) => {
 
             switch (event.keyCode) {
@@ -55,6 +66,7 @@
             }
         };
 
+        /* the game starts by calling this */
         let main = () => {
             return this.scenes.choice.play()
                 .then(() => {

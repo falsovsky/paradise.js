@@ -6,13 +6,22 @@
 
     let Scene = function(scene, canvas) {
 
+        /* frames that compose this scene. a frame is made up of several
+        overlapped images. */
         this.frames = scene.frames;
+
+        /* default roll (sequence of frames) of this scene */
         this.roll = scene.roll;
+
+        /* other rolls that depend on choices (like key presses) */
         this.choices = scene.choices;
+
+        /* the html5 canvas object */
         this.canvas = canvas;
 
     };
 
+    /* draw one of the specified frames in this scene */
     Scene.prototype.drawFrame = function(frame) {
 
         let images = this.frames[frame];
@@ -23,13 +32,15 @@
         });
     };
 
-    /* if called with no arguments, it will render the scene specified in this.roll
-     * otherwise it will render the roll specified in choices, with the key name
-     * given as argument */
+    /* play a roll of this scene. if called with no arguments, it will
+     * render the default scene roll.
+     * alternatively one of the scene roll choices can be specified as
+     * argument. */
     Scene.prototype.play = function(choice) {
 
-        /* transform a scene roll array into a flat array of simple
-         * scene objects ({ name, duration }), repeating as needed  */
+        /* transform the scene roll definition given in the .json scene file
+         * into a flat array of simple ({ name, duration }) objects.
+         * this will deal with all the repeat: properties and multi level nesting */
         let expand = (roll) => {
 
             /* recursively expand repeats */
@@ -54,9 +65,9 @@
 
         };
 
-        /* transform the expanded array into an array of asynchronous
-         * functions that can be called one after another, and so render
-         * the scene */
+        /* transform the expanded array into an array of functions that
+         * return promises and that should be called one after another.
+         * calling these functions will render the scene. */
         let functionalize = (expanded) => {
 
             let functionalized = expanded.map((frame) => {
@@ -75,11 +86,19 @@
 
         };
 
+        /* pick scene to render between one of the several scene roll choices
+         * or the default scene roll */
         let scene = choice ? this.choices[choice] : this.roll;
+
+        /* expand the scene definition (get a flat array of simple { name, duration }
+         * objects */
         let expanded = expand(scene);
+
+        /* transform the array obtained into an array of functions */
         let functionalized = functionalize(expanded);
 
-        console.log(functionalized);
+        /* call the functions in the array obtained one after the other after each
+         * returned promise resolves */
         let promise = functionalized[0]();
         for (let i = 1; i < functionalized.length; i++) {
             promise = promise.then(functionalized[i]);
