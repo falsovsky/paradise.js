@@ -15,15 +15,8 @@ function reset() {
     room();
 }
 
-
-/**
- * @author cc
- * Unified func for keydown and touch events
- */
 function doAction(actionID) {
-
     if(selected === 0) {
-
         switch(actionID) {
             case 70:
                 selected = 1;
@@ -52,36 +45,27 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
     canvas.setAttribute('height', canvasHeight);
     canvas.setAttribute('id', 'canvas');
     canvasDiv.appendChild(canvas);
-    
+
     if(typeof G_vmlCanvasManager != 'undefined') {
         canvas = G_vmlCanvasManager.initElement(canvas);
     }
     context = canvas.getContext("2d"); // Grab the 2d canvas context
     // Note: The above code is a workaround for IE 8and lower. Otherwise we could have used:
     //     context = document.getElementById('canvas').getContext("2d");
-    
-
-    /**
-     * @author: cc
-     * Do device validation, fix layout and assign their events
-     */
 
     //Check device
-    if( navigator.userAgent.match(/Android/i) ||
+    if (navigator.userAgent.match(/Android/i) ||
         navigator.userAgent.match(/iPhone|iPad|iPod/i) ||
-        navigator.userAgent.match(/IEMobile/i) ) {          //is mobile
-
+        navigator.userAgent.match(/IEMobile/i)) {
             document.getElementById("infoDiv").style.display = "none";
             var elems = document.getElementById("touch-elems").getElementsByTagName("li");
             for(var i = 0; i < elems.length; i++) {
                 elems[i].addEventListener("click", function(e) {
-
                     doAction( parseInt(e.target.id) );
                 }, true);
             }
     } else {                                                //is desktop
-
-       document.getElementById("infoTouchDiv").style.display = "none";
+        document.getElementById("infoTouchDiv").style.display = "none";
         window.addEventListener('keydown', function(e) {
             doAction(e.keyCode);
         }, true);
@@ -111,7 +95,7 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
 function loadImage(name)
 {
     images[name] = new Image();
-    images[name].onload = function() { 
+    images[name].onload = function() {
         resourceLoaded();
     }
     images[name].src = name + ".png";
