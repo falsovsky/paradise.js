@@ -39,7 +39,7 @@
             window.removeEventListener('keydown', listener, true);
 
             /* play the selected choice screen */
-            this.scenes.choice.play(scene)
+            this.scenes['choice_' + scene].play()
                 /* then play the chosen scene */
                 .then(() => this.scenes[scene].play())
                 /* then play the reinaldo scene */

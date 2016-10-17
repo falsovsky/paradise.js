@@ -1,34 +1,22 @@
 {
-  "frames": {
-    "vaginal_initial": [
-      "room",
-      "vaginal_base",
-      "vaginal_frame1"
-    ],
-    "vaginal_frame1": [
-      "vaginal_frame1"
-    ],
-    "vaginal_frame2": [
-      "vaginal_frame2"
-    ],
-    "vaginal_balloon_venho": [
-      "vaginal_balloon_venho"
-    ]
-  },
   "roll": [
     {
-      "name": "vaginal_initial",
+      "images": [
+        "room",
+        "vaginal_base",
+        "vaginal_frame1"
+      ],
       "duration": 750
     },
     {
       "repeat": 10,
       "roll": [
         {
-          "name": "vaginal_frame1",
+          "images": "vaginal_frame1",
           "duration": 150
         },
         {
-          "name": "vaginal_frame2",
+          "images": "vaginal_frame2",
           "duration": 150
         }
       ]
@@ -37,33 +25,37 @@
       "repeat": 5,
       "roll": [
         {
-          "name": "vaginal_frame1",
+          "images": "vaginal_frame1",
           "duration": 50
         },
         {
-          "name": "vaginal_frame2",
+          "images": "vaginal_frame2",
           "duration": 50
         }
       ]
     },
     {
-      "name": "vaginal_balloon_venho"
+      "images": "vaginal_balloon_venho"
     },
     {
       "repeat": 6,
       "roll": [
         {
-          "name": "vaginal_frame1",
+          "images": "vaginal_frame1",
           "duration": 250
         },
         {
-          "name": "vaginal_frame2",
+          "images": "vaginal_frame2",
           "duration": 250
         }
       ]
     },
     {
-      "name": "vaginal_initial",
+      "images": [
+        "room",
+        "vaginal_base",
+        "vaginal_frame1"
+      ],
       "duration": 2500
     }
   ]

@@ -6,15 +6,8 @@
 
     let Scene = function(scene, canvas) {
 
-        /* frames that compose this scene. a frame is made up of several
-        overlapped images. */
-        this.frames = scene.frames;
-
-        /* default roll (sequence of frames) of this scene */
-        this.roll = scene.roll;
-
-        /* other rolls that depend on choices (like key presses) */
-        this.choices = scene.choices;
+        /* scene definition from json */
+        this.scene = scene;
 
         /* the html5 canvas object */
         this.canvas = canvas;
@@ -22,21 +15,16 @@
     };
 
     /* draw one of the specified frames in this scene */
-    Scene.prototype.drawFrame = function(frame) {
+    Scene.prototype.drawFrame = function(images) {
 
-        let images = this.frames[frame];
-
-        images.forEach((image) => {
+        [].concat(images).forEach((image) => {
             this.canvas.drawImage(image);
 
         });
     };
 
-    /* play a roll of this scene. if called with no arguments, it will
-     * render the default scene roll.
-     * alternatively one of the scene roll choices can be specified as
-     * argument. */
-    Scene.prototype.play = function(choice) {
+    /* play this scene on the given canvas */
+    Scene.prototype.play = function() {
 
         /* transform the scene roll definition given in the .json scene file
          * into a flat array of simple ({ name, duration }) objects.
@@ -74,7 +62,7 @@
 
                 return () => new Promise((resolve, reject) => {
 
-                    this.drawFrame(frame.name);
+                    this.drawFrame(frame.images);
                     setTimeout(() => {
                         return resolve();
                     }, frame.duration);
@@ -86,13 +74,9 @@
 
         };
 
-        /* pick scene to render between one of the several scene roll choices
-         * or the default scene roll */
-        let scene = choice ? this.choices[choice] : this.roll;
-
         /* expand the scene definition (get a flat array of simple { name, duration }
          * objects */
-        let expanded = expand(scene);
+        let expanded = expand(this.scene.roll);
 
         /* transform the array obtained into an array of functions */
         let functionalized = functionalize(expanded);
