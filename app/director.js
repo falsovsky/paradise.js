@@ -41,7 +41,9 @@
             /* play the selected choice screen */
             this.scenes.choice.play(scene)
                 /* then play the chosen scene */
-                .then(this.scenes[scene].play.bind(this.scenes[scene]))
+                .then(() => this.scenes[scene].play())
+                /* then play the reinaldo scene */
+                .then(() => this.scenes.reinaldo.play())
                 /* then start all over again */
                 .then(main);
         };

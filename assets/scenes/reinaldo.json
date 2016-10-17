@@ -1,0 +1,164 @@
+{
+  "frames": {
+    "reinaldo_initial": [
+      "room",
+      "whore",
+      "hero"
+    ],
+    "reinaldo_balloon_sao_1000": [
+      "reinaldo_balloon_sao_1000"
+    ],
+    "reinaldo_balloon_nao_tenho": [
+      "reinaldo_balloon_nao_tenho"
+    ],
+    "reinaldo_baloon_ho_reinaldo": [
+      "reinaldo_balloon_ho_reinaldo"
+    ],
+    "reinaldo_cabeca": [
+      "reinaldo_cabeca"
+    ],
+    "reinaldo_balloon_cu_cu": [
+      "reinaldo_balloon_cu_cu"
+    ],
+    "reinaldo_violar_initial": [
+      "room",
+      "whore",
+      "hero",
+      "reinaldo"
+    ],
+    "reinaldo_balloon_o_que_foi": [
+      "reinaldo_balloon_o_que_foi"
+    ],
+    "reinaldo_balloon_nao_quer_pagar": [
+      "reinaldo_balloon_nao_quer_pagar"
+    ],
+    "reinaldo_balloon_ja_vai_ver": [
+      "reinaldo_balloon_ja_vai_ver"
+    ],
+    "reinaldo_violar_base": [
+      "room",
+      "whore",
+      "reinaldo_violar_base"
+    ],
+    "reinaldo_violar_frame1": [
+      "reinaldo_violar_frame1"
+    ],
+    "reinaldo_violar_frame2": [
+      "reinaldo_violar_frame2"
+    ],
+    "reinaldo_balloon_caralhinho": [
+      "reinaldo_balloon_caralhinho"
+    ]
+  },
+  "roll": [
+    {
+      "name": "reinaldo_initial",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_balloon_sao_1000",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_initial",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_balloon_nao_tenho",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_initial",
+      "duration": 150
+    },
+    {
+      "name": "reinaldo_baloon_ho_reinaldo",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_initial",
+      "duration": 150
+    },
+    {
+      "name": "reinaldo_cabeca",
+      "duration": 250
+    },
+    {
+      "name": "reinaldo_balloon_cu_cu",
+      "duration": 750
+    },
+    {
+      "name": "reinaldo_violar_initial",
+      "duration": 150
+    },
+    {
+      "name": "reinaldo_balloon_o_que_foi",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_violar_initial",
+      "duration": 150
+    },
+    {
+      "name": "reinaldo_balloon_nao_quer_pagar",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_violar_initial",
+      "duration": 150
+    },
+    {
+      "name": "reinaldo_balloon_ja_vai_ver",
+      "duration": 1000
+    },
+    {
+      "name": "reinaldo_violar_initial",
+      "duration": 150
+    },
+    {
+      "name": "reinaldo_violar_base"
+    },
+    {
+      "repeat": 7,
+      "roll": [
+        {
+          "name": "reinaldo_violar_frame1",
+          "duration": 250
+        },
+        {
+          "name": "reinaldo_violar_frame2",
+          "duration": 250
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "roll": [
+        {
+          "name": "reinaldo_violar_frame1",
+          "duration": 250
+        },
+        {
+          "name": "reinaldo_violar_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "name": "reinaldo_balloon_caralhinho"
+    },
+    {
+      "repeat": 15,
+      "roll": [
+        {
+          "name": "reinaldo_violar_frame1",
+          "duration": 150
+        },
+        {
+          "name": "reinaldo_violar_frame2",
+          "duration": 150
+        }
+      ]
+    }
+  ]
+}
