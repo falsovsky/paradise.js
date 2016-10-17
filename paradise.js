@@ -15,10 +15,16 @@ function reset() {
     room();
 }
 
-function doKeyDown(e)
-{
-    if (selected == 0) {
-        switch(e.keyCode) {
+
+/**
+ * @author cc
+ * Unified func for keydown and touch events
+ */
+function doAction(actionID) {
+
+    if(selected === 0) {
+
+        switch(actionID) {
             case 70:
                 selected = 1;
                 context.drawImage(images["balloon_vaginal"], 0, 0);
@@ -54,7 +60,31 @@ function prepareCanvas(canvasDiv, canvasWidth, canvasHeight)
     // Note: The above code is a workaround for IE 8and lower. Otherwise we could have used:
     //     context = document.getElementById('canvas').getContext("2d");
     
-    window.addEventListener('keydown', doKeyDown, true);
+
+    /**
+     * @author: cc
+     * Do device validation, fix layout and assign their events
+     */
+    //Check device
+    if( navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/iPhone|iPad|iPod/i) ||
+        navigator.userAgent.match(/IEMobile/i) ) {          //is mobile
+
+            document.getElementById("infoDiv").style.display = "none";
+            var elems = document.getElementById("touch-elems").getElementsByTagName("li");
+            for(var i = 0; i < elems.length; i++) {
+                elems[i].addEventListener("click", function(e) {
+
+                    doAction( parseInt(e.target.id) );
+                }, true);
+            }
+    } else {                                                //is desktop
+
+       document.getElementById("infoTouchDiv").style.display = "none";
+        window.addEventListener('keydown', function(e) {
+            doAction(e.keyCode);
+        }, true);
+    }
 
     var myImages = [
         "room", "whore", "hero", "balloon_choose",
