@@ -2,7 +2,7 @@
 
     'use strict';
 
-    const _ = require('lodash');
+    const mapValues = require('lodash.mapvalues');
     const Scene = require('./scene');
 
     let Director = function(canvas) {
@@ -25,7 +25,7 @@
 
         /* map object with scene definitions obtained above into object
          * containing Scene objects with scene name as a key */
-        this.scenes = _.mapValues(scenes, (value, key) => {
+        this.scenes = mapValues(scenes, (value, key) => {
             return new Scene(value, this.canvas);
         });
 
@@ -42,7 +42,7 @@
             /* add event listeners */
             window.addEventListener('keydown', keyListener, false);
 
-            /* LOL there is no forEach in DOMNodeList
+            /* LOL there is no forEach in DOM NodeList
              * http://stackoverflow.com/questions/13433799/why-doesnt-nodelist-have-foreach */
             Array.prototype.forEach.call(document.getElementsByClassName('user-action'), (element) => {
 

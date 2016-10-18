@@ -2,7 +2,7 @@
 
     'use strict';
 
-    const _ = require('lodash');
+    const flattenDeep = require('lodash.flattendeep');
 
     let Scene = function(scene, canvas) {
 
@@ -49,7 +49,7 @@
 
             });
 
-            return _.flattenDeep(expanded);
+            return flattenDeep(expanded);
 
         };
 
