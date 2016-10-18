@@ -2,7 +2,7 @@
 
     'use strict';
 
-    let Canvas = function(container, width, height) {
+    let Canvas = function(container, width, height, scale) {
 
         /* html element that the canvas will be created in */
         this.container = container;
@@ -13,10 +13,17 @@
         /* canvas height */
         this.height = height;
 
+        /* canvas scale */
+        this.scale = scale || 1;
+
+        /* container element - set properties */
+        container.style.width = (this.width * this.scale) + 'px';
+        container.style.height = (this.height * this.scale)  + 'px';
+
         /* canvas element - create and set properties */
         this.canvas = document.createElement('canvas');
-        this.canvas.setAttribute('width', this.width);
-        this.canvas.setAttribute('height', this.height);
+        this.canvas.setAttribute('width', this.width * this.scale);
+        this.canvas.setAttribute('height', this.height * this.scale);
         this.canvas.setAttribute('id', 'canvas');
 
         /* insert in dom */
@@ -49,7 +56,7 @@
 
         var image = new Image();
         image.onload = () => {
-          this.context.drawImage(image, 0, 0);
+          this.context.drawImage(image, 0, 0, image.width, image.height, 0, 0, this.canvas.width, this.canvas.height);
         };
         image.src = this.images[name];
 

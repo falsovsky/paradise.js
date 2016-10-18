@@ -15,7 +15,8 @@ module.exports = {
             { test: /\.css$/, loader: "style!css" },
             { test: /\.json$/, loader: "json" },
             { test: /\.hbs$/, loader: "handlebars-loader" },
-            { test: /\.(woff|png|jpg|gif)$/, loader: 'url-loader?limit=10000' }
+            { test: /\.(woff|png|jpg|gif)$/, loader: 'url-loader?limit=10000' },
+            { test: /\.scss$/, loaders: ["style", "css", "sass"] }
         ]
     },
     plugins: [

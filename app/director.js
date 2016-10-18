@@ -31,12 +31,56 @@
 
     };
 
-    /*  begins the game */
+    /* begins the game (actually runs the whole game) */
+    /* @TODO lol everything is implemented here, if this needs to grow it will become ugly
+     * think about refactoring all the code in here later */
     Director.prototype.begin = function() {
+
+        /* enable user input */
+        let enableUserInput = () => {
+
+            /* add event listeners */
+            window.addEventListener('keydown', keyListener, false);
+
+            /* LOL there is no forEach in DOMNodeList
+             * http://stackoverflow.com/questions/13433799/why-doesnt-nodelist-have-foreach */
+            Array.prototype.forEach.call(document.getElementsByClassName('user-action'), (element) => {
+
+                /* add event listeners */
+                element.addEventListener('mouseup', mouseListener, false);
+                element.addEventListener('touchup', touchListener, false);
+
+            });
+
+            /* hide user input area */
+            document.getElementById('ul-teclas').className = '';
+
+        };
+
+        /* disable user input */
+        let disableUserInput = () => {
+
+            /* add event listeners */
+            window.removeEventListener('keydown', keyListener, false);
+
+            /* see above */
+            Array.prototype.forEach.call(document.getElementsByClassName('user-action'), (element) => {
+
+                /* remove event listeners */
+                element.removeEventListener('mouseup', mouseListener, false);
+                element.removeEventListener('touchup', touchListener, false);
+
+            });
+
+            /* hide user input area */
+            document.getElementById('ul-teclas').className = 'hidden';
+
+        };
 
         /* consequence of user action (key pressed) */
         let choice = (scene) => {
-            window.removeEventListener('keydown', listener, true);
+
+            disableUserInput();
 
             /* play the selected choice screen */
             this.scenes['choice_' + scene].play()
@@ -49,31 +93,36 @@
         };
 
         /* keydown window event listener */
-        let listener = (event) => {
+        let keyListener = function(event) {
 
-            switch (event.keyCode) {
+            let actions = {
+                67: 'anal',
+                70: 'vaginal',
+                66: 'oral'
+            };
 
-                case 67:
-                    choice('anal');
-                    break;
+            let action = actions[event.keyCode];
 
-                case 70:
-                    choice('vaginal');
-                    break;
-
-                case 66:
-                    choice('oral');
-                    break;
-
+            if (action) {
+                choice(action);
             }
+
+        };
+
+        let mouseListener = function(event)  {
+            let action = this.getAttribute('data-action');
+            choice(action);
+        };
+
+        let touchListener = function(event) {
+            let action = this.getAttribute('data-action');
+            choice(action);
         };
 
         /* the game starts by calling this */
         let main = () => {
             return this.scenes.choice.play()
-                .then(() => {
-                    window.addEventListener('keydown', listener, true);
-                });
+                .then(enableUserInput);
         };
 
         return main();

@@ -3,13 +3,13 @@
     'use strict';
 
     /* css stuff */
-    require('../assets/style.css');
+    require('../assets/style.scss');
 
     /* load title image into title div because im using a stupid fucking
      * plugin to generate index.html automagically and i dont know how
      * pass content to the template */
     const image = require('../assets/page/paradise.gif');
-    document.getElementById('titleImg').src = image;
+    document.getElementById('img-title').src = image;
 
     /* Canvas abstraction */
     const Canvas = require('./canvas');
@@ -18,7 +18,10 @@
     const Director = require('./director');
 
     /* create a canvas */
-    let canvas = new Canvas(document.getElementById("canvasDiv"), 512, 272);
+    const scale = 1;
+    const width = 512;
+    const height = 272;
+    let canvas = new Canvas(document.getElementById("div-canvas"), width, height, scale);
 
     /* create game director with this canvas */
     let director = new Director(canvas);
