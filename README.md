@@ -2,7 +2,7 @@
 
 HTML canvas implementation of Paradise Café using webpack as build system.
 
-Demo at [https://paradise.cafe/](https://paradise.cafe/).
+Demo at [http://paradise.cafe/](http://paradise.cafe/).
 
 
 ### Install dependencies
