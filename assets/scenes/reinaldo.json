@@ -13,23 +13,7 @@
       "duration": 1500
     },
     {
-      "images": [
-        "room",
-        "whore",
-        "hero"
-      ],
-      "duration": 1500
-    },
-    {
       "images": "reinaldo_balloon_nao_tenho",
-      "duration": 1500
-    },
-    {
-      "images": [
-        "room",
-        "whore",
-        "hero"
-      ],
       "duration": 1500
     },
     {
@@ -42,15 +26,14 @@
         "whore",
         "hero"
       ],
+      "duration": 500
+    },
+    {
+      "images": [
+        "reinaldo_cabeca",
+        "reinaldo_balloon_cu_cu"
+      ],
       "duration": 1500
-    },
-    {
-      "images": "reinaldo_cabeca",
-      "duration": 250
-    },
-    {
-      "images": "reinaldo_balloon_cu_cu",
-      "duration": 750
     },
     {
       "images": [
@@ -59,7 +42,7 @@
         "hero",
         "reinaldo"
       ],
-      "duration": 150
+      "duration": 500
     },
     {
       "images": "reinaldo_balloon_o_que_foi",
@@ -108,6 +91,10 @@
       ]
     },
     {
+      "images": "reinaldo_violar_frame1",
+      "duration": 1000
+    },
+    {
       "repeat": 7,
       "roll": [
         {
@@ -148,6 +135,10 @@
           "duration": 150
         }
       ]
+    },
+    {
+      "images": "reinaldo_violar_frame1",
+      "duration": 2000
     }
   ]
 }
