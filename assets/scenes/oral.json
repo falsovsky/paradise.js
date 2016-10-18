@@ -9,7 +9,7 @@
       "duration": 750
     },
     {
-      "repeat": 20,
+      "repeat": 10,
       "roll": [
         {
           "images": "oral_frame1",
@@ -34,6 +34,22 @@
         {
           "images": "oral_frame2",
           "duration": 150
+        }
+      ]
+    },
+    {
+      "images": "oral_balloon_quebom"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "images": "oral_frame1",
+          "duration": 350
+        },
+        {
+          "images": "oral_frame2",
+          "duration": 350
         }
       ]
     }
