@@ -70,10 +70,7 @@
       ]
     },
     {
-      "images": [
-        "anal_balloon_grosso",
-        "anal_balloon_aaaa"
-      ]
+      "images": "anal_balloon_aaaa"
     },
     {
       "repeat": 5,
@@ -87,6 +84,10 @@
           "duration": 100
         }
       ]
+    },
+    {
+      "images": "anal_frame1",
+      "duration": 2000
     }
   ]
 }
