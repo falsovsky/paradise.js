@@ -1,0 +1,40 @@
+{
+  "name": "paradise.js",
+  "version": "1.0.0",
+  "description": "HTML canvas implementation of Paradise Café",
+  "main": "excanvas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build": "node ./node_modules/webpack/bin/webpack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ticklemynausea/paradise.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ticklemynausea/paradise.js/issues"
+  },
+  "homepage": "https://github.com/ticklemynausea/paradise.js#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^2.22.0",
+    "lodash.flattendeep": "^4.4.0",
+    "lodash.mapvalues": "^4.6.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "handlebars": "^4.0.5",
+    "handlebars-loader": "^1.4.0",
+    "html-webpack-plugin": "^2.22.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.10.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

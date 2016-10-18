@@ -1,0 +1,153 @@
+{
+  "roll": [
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero"
+      ],
+      "duration": 1500
+    },
+    {
+      "images": "reinaldo_balloon_sao_1000",
+      "duration": 1500
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero"
+      ],
+      "duration": 1500
+    },
+    {
+      "images": "reinaldo_balloon_nao_tenho",
+      "duration": 1500
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero"
+      ],
+      "duration": 1500
+    },
+    {
+      "images": "reinaldo_balloon_ho_reinaldo",
+      "duration": 1500
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero"
+      ],
+      "duration": 1500
+    },
+    {
+      "images": "reinaldo_cabeca",
+      "duration": 250
+    },
+    {
+      "images": "reinaldo_balloon_cu_cu",
+      "duration": 750
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero",
+        "reinaldo"
+      ],
+      "duration": 150
+    },
+    {
+      "images": "reinaldo_balloon_o_que_foi",
+      "duration": 1500
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero",
+        "reinaldo"
+      ],
+      "duration": 150
+    },
+    {
+      "images": "reinaldo_balloon_nao_quer_pagar",
+      "duration": 1500
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero",
+        "reinaldo"
+      ],
+      "duration": 150
+    },
+    {
+      "images": "reinaldo_balloon_ja_vai_ver",
+      "duration": 1500
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "hero",
+        "reinaldo"
+      ],
+      "duration": 500
+    },
+    {
+      "images": [
+        "room",
+        "whore",
+        "reinaldo_violar_base"
+      ]
+    },
+    {
+      "repeat": 7,
+      "roll": [
+        {
+          "images": "reinaldo_violar_frame1",
+          "duration": 250
+        },
+        {
+          "images": "reinaldo_violar_frame2",
+          "duration": 250
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "roll": [
+        {
+          "images": "reinaldo_violar_frame1",
+          "duration": 250
+        },
+        {
+          "images": "reinaldo_violar_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "images": "reinaldo_balloon_caralhinho"
+    },
+    {
+      "repeat": 15,
+      "roll": [
+        {
+          "images": "reinaldo_violar_frame1",
+          "duration": 150
+        },
+        {
+          "images": "reinaldo_violar_frame2",
+          "duration": 150
+        }
+      ]
+    }
+  ]
+}

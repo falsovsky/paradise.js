@@ -1,0 +1,41 @@
+{
+  "roll": [
+    {
+      "images": [
+        "room",
+        "oral_base",
+        "oral_frame1"
+      ],
+      "duration": 750
+    },
+    {
+      "repeat": 20,
+      "roll": [
+        {
+          "images": "oral_frame1",
+          "duration": 250
+        },
+        {
+          "images": "oral_frame2",
+          "duration": 250
+        }
+      ]
+    },
+    {
+      "images": "oral_balloon_chupa"
+    },
+    {
+      "repeat": 10,
+      "roll": [
+        {
+          "images": "oral_frame1",
+          "duration": 150
+        },
+        {
+          "images": "oral_frame2",
+          "duration": 150
+        }
+      ]
+    }
+  ]
+}

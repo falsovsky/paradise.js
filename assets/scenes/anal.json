@@ -1,0 +1,92 @@
+{
+  "roll": [
+    {
+      "images": [
+        "room",
+        "anal_base",
+        "anal_frame1"
+      ],
+      "duration": 750
+    },
+    {
+      "repeat": 10,
+      "roll": [
+        {
+          "images": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "images": "anal_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "images": "anal_balloon_grosso"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "images": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "images": "anal_frame2",
+          "duration": 250
+        }
+      ]
+    },
+    {
+      "images": "anal_balloon_clear"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "images": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "images": "anal_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "images": "anal_balloon_aaaa"
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "images": "anal_frame1",
+          "duration": 150
+        },
+        {
+          "images": "anal_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "images": [
+        "anal_balloon_grosso",
+        "anal_balloon_aaaa"
+      ]
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "images": "anal_frame1",
+          "duration": 100
+        },
+        {
+          "images": "anal_frame2",
+          "duration": 100
+        }
+      ]
+    }
+  ]
+}

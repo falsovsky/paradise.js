@@ -1,0 +1,62 @@
+{
+  "roll": [
+    {
+      "images": [
+        "room",
+        "vaginal_base",
+        "vaginal_frame1"
+      ],
+      "duration": 750
+    },
+    {
+      "repeat": 10,
+      "roll": [
+        {
+          "images": "vaginal_frame1",
+          "duration": 150
+        },
+        {
+          "images": "vaginal_frame2",
+          "duration": 150
+        }
+      ]
+    },
+    {
+      "repeat": 5,
+      "roll": [
+        {
+          "images": "vaginal_frame1",
+          "duration": 50
+        },
+        {
+          "images": "vaginal_frame2",
+          "duration": 50
+        }
+      ]
+    },
+    {
+      "images": "vaginal_balloon_venho"
+    },
+    {
+      "repeat": 6,
+      "roll": [
+        {
+          "images": "vaginal_frame1",
+          "duration": 250
+        },
+        {
+          "images": "vaginal_frame2",
+          "duration": 250
+        }
+      ]
+    },
+    {
+      "images": [
+        "room",
+        "vaginal_base",
+        "vaginal_frame1"
+      ],
+      "duration": 2500
+    }
+  ]
+}
