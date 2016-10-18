@@ -52,6 +52,10 @@
           "duration": 350
         }
       ]
+    },
+    {
+      "images": "oral_frame1",
+      "duration": 2000
     }
   ]
 }
