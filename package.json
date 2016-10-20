@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ticklemynausea/paradise.js.git"
+    "url": "git+https://github.com/falsovsky/paradise.js.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ticklemynausea/paradise.js/issues"
+    "url": "https://github.com/falsovsky/paradise.js/issues"
   },
-  "homepage": "https://github.com/ticklemynausea/paradise.js#readme",
+  "homepage": "https://github.com/falsovsky/paradise.js#readme",
   "dependencies": {
     "lodash.flattendeep": "^4.4.0",
     "lodash.mapvalues": "^4.6.0"
