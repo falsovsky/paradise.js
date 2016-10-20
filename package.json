@@ -19,10 +19,14 @@
   },
   "homepage": "https://github.com/falsovsky/paradise.js#readme",
   "dependencies": {
+    "es6-promise": "^4.0.5",
     "lodash.flattendeep": "^4.4.0",
     "lodash.mapvalues": "^4.6.0"
   },
   "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
     "handlebars": "^4.0.5",

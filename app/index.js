@@ -2,6 +2,9 @@
 
     'use strict';
 
+    /* polyfill es6 promise */
+    require('es6-promise').polyfill();
+
     /* css stuff */
     require('../assets/style.scss');
 
