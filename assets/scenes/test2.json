@@ -1,5 +1,5 @@
 {
-  "repeat": 1,
+  "repeat": 10,
   "roll": [
       {
         "images": "choice_balloon_vaginal",
@@ -13,7 +13,7 @@
         "repeat": 2,
         "roll": [
           {
-            "repeat": 2,
+            "repeat": 3,
             "roll": [
               {
                 "images": "oral_frame1",

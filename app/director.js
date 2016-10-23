@@ -37,7 +37,8 @@
 
         /* create user input area */
         document.getElementById('ul-teclas').innerHTML = userChoices.reduce((accumulator, choice) => {
-            accumulator += `<li class="user-action" id="li-${choice.name}" data-action="${choice.name}">${choice.key}<div>${choice.name}</div></li>`;
+            accumulator +=
+                `<li class="user-action" id="li-${choice.name}" data-action="${choice.name}">${choice.key}<div>${choice.name}</div></li>`;
             return accumulator;
         }, '');
 
@@ -130,7 +131,7 @@
 
         /* the game starts by calling this */
         let main = () => {
-            return this.scenes.test2.play()
+            return this.scenes.choice.play()
                 .then(() => this.enableUserInput(userChoices, afterChoice));
         };
 

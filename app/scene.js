@@ -1,8 +1,9 @@
-(function() {
+    (function() {
 
     'use strict';
 
     const flattenDeep = require('lodash.flattendeep');
+    const cloneDeep = require('lodash.clonedeep');
 
     let Scene = function(scene, canvas) {
 
@@ -31,12 +32,14 @@
          * this will deal with all the repeat: properties and multi level nesting */
         let expand = (scene) => {
 
-            /* expand first roll */
-            console.log('expanding', JSON.stringify(scene, null, 2));
-            scene.roll = [].concat.apply([], Array(scene.repeat || 1).fill(scene.roll));
+            /* expand this roll */
+            let roll = [];
+            for (let i = 0; i < (scene.repeat || 1); i++) {
+                roll = roll.concat(cloneDeep(scene.roll));
+            }
+            scene.roll = roll;
 
-            /* recursively expand rolls */
-
+            /* recursively expand child rolls */
             let expanded = scene.roll.map((scene) => {
 
                 if (scene.hasOwnProperty('roll')) {
@@ -47,7 +50,7 @@
 
             });
 
-            return expanded;
+            return flattenDeep(expanded);
 
         };
 
@@ -61,9 +64,7 @@
                 return () => new Promise((resolve, reject) => {
 
                     this.drawFrame(frame.images);
-                    setTimeout(() => {
-                        return resolve();
-                    }, frame.duration);
+                    setTimeout(() => resolve(), frame.duration);
 
                 });
             });
@@ -75,7 +76,7 @@
         /* expand the scene definition (get a flat array of simple { name, duration }
          * objects */
         let expanded = expand(this.scene);
-expanded.forEach(x => console.log(x));
+        //console.log('expanded', JSON.stringify(expanded, null, 2));
         /* transform the array obtained into an array of functions */
         let functionalized = functionalize(expanded);
 
