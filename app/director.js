@@ -130,7 +130,7 @@
 
         /* the game starts by calling this */
         let main = () => {
-            return this.scenes.choice.play()
+            return this.scenes.test2.play()
                 .then(() => this.enableUserInput(userChoices, afterChoice));
         };
 

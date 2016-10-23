@@ -29,27 +29,25 @@
         /* transform the scene roll definition given in the .json scene file
          * into a flat array of simple ({ name, duration }) objects.
          * this will deal with all the repeat: properties and multi level nesting */
-        let expand = (roll) => {
+        let expand = (scene) => {
 
-            /* recursively expand repeats */
-            let expanded = roll.map((scene) => {
+            /* expand first roll */
+            console.log('expanding', JSON.stringify(scene, null, 2));
+            scene.roll = [].concat.apply([], Array(scene.repeat || 1).fill(scene.roll));
 
-                if (scene.hasOwnProperty('repeat')) {
+            /* recursively expand rolls */
 
-                    let roll = [];
+            let expanded = scene.roll.map((scene) => {
 
-                    for (let i = 0; i < scene.repeat; i++) {
-                        roll = roll.concat(scene.roll);
-                    }
-
-                    return expand(roll);
+                if (scene.hasOwnProperty('roll')) {
+                    return expand(scene);
                 }
 
                 return scene;
 
             });
 
-            return flattenDeep(expanded);
+            return expanded;
 
         };
 
@@ -76,8 +74,8 @@
 
         /* expand the scene definition (get a flat array of simple { name, duration }
          * objects */
-        let expanded = expand(this.scene.roll);
-
+        let expanded = expand(this.scene);
+expanded.forEach(x => console.log(x));
         /* transform the array obtained into an array of functions */
         let functionalized = functionalize(expanded);
 

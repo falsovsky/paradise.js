@@ -9,7 +9,18 @@
       "duration": 1500
     },
     {
+      "if": { "valor": 1000 },
       "images": "reinaldo_balloon_sao_1000",
+      "duration": 1500
+    },
+    {
+      "if": { "valor": 2000 },
+      "images": "reinaldo_balloon_sao_2000",
+      "duration": 1500
+    },
+    {
+      "if": { "valor": 3000 },
+      "images": "reinaldo_balloon_sao_3000",
       "duration": 1500
     },
     {
