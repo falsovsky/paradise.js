@@ -20,9 +20,7 @@
   "homepage": "https://github.com/falsovsky/paradise.js#readme",
   "dependencies": {
     "es6-promise": "^4.0.5",
-    "lodash.flatten": "^4.4.0",
-    "lodash.flattendeep": "^4.4.0",
-    "lodash.mapvalues": "^4.6.0"
+    "lodash": "^4.16.4"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",

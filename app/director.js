@@ -2,7 +2,10 @@
 
     'use strict';
 
-    const mapValues = require('lodash.mapvalues');
+    const _ = {
+        mapValues: require('lodash/mapvalues'),
+        sample: require('lodash/sample')
+    };
     const Scene = require('./scene');
 
     let Director = function(canvas) {
@@ -26,7 +29,7 @@
 
         /* map object with scene definitions obtained above into object
          * containing Scene objects with scene name as a key */
-        this.scenes = mapValues(scenes, (value, key) => {
+        this.scenes = _.mapValues(scenes, (value, key) => {
             return new Scene(value, this.canvas);
         });
 
@@ -124,7 +127,11 @@
                 /* then play the chosen scene */
                 .then(() => this.scenes[scene].play())
                 /* then play the reinaldo scene */
-                .then(() => this.scenes.reinaldo.play())
+                .then(() => {
+                    /* set valor property for reinaldo scene */
+                    this.scenes.reinaldo.properties.valor_acto = _.sample([1000, 2000, 3000]);
+                    return this.scenes.reinaldo.play();
+                })
                 /* then start all over again */
                 .then(main);
         };
