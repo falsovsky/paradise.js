@@ -1,0 +1,13 @@
+{
+  "repeat": 3,
+  "roll": [
+      {
+        "images": "choice_balloon_vaginal",
+        "duration": 500
+      },
+      {
+        "images": "choice_balloon_anal",
+        "duration": 500
+      }
+    ]
+}

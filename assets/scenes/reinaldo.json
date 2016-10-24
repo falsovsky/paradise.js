@@ -9,8 +9,31 @@
       "duration": 1500
     },
     {
-      "images": "reinaldo_balloon_sao_1000",
-      "duration": 1500
+      "if": { "valor_acto": 1000 },
+      "roll": [
+        {
+          "images": "reinaldo_balloon_sao_1000",
+          "duration": 1500
+        }
+      ]
+    },
+    {
+      "if": { "valor_acto": 2000 },
+      "roll": [
+        {
+          "images": "reinaldo_balloon_sao_2000",
+          "duration": 1500
+        }
+      ]
+    },
+    {
+      "if": { "valor_acto": 3000 },
+      "roll": [
+        {
+          "images": "reinaldo_balloon_sao_3000",
+          "duration": 1500
+        }
+      ]
     },
     {
       "images": "reinaldo_balloon_nao_tenho",

@@ -1,0 +1,44 @@
+{
+  "repeat": 10,
+  "roll": [
+      {
+        "images": "choice_balloon_vaginal",
+        "duration": 500
+      },
+      {
+        "images": "choice_balloon_anal",
+        "duration": 500
+      },
+      {
+        "repeat": 2,
+        "roll": [
+          {
+            "repeat": 3,
+            "roll": [
+              {
+                "images": "oral_frame1",
+                "duration": 250
+              },
+              {
+                "images": "oral_frame2",
+                "duration": 250
+              }
+            ]
+          },
+          {
+            "repeat": 2,
+            "roll": [
+              {
+                "images": "reinaldo_violar_frame1",
+                "duration": 250
+              },
+              {
+                "images": "reinaldo_violar_frame2",
+                "duration": 250
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}

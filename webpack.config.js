@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const htmlWebpackOptions = {
@@ -8,7 +9,8 @@ module.exports = {
     entry: "./app/index.js",
     output: {
         path: 'build',
-        filename: "bundle.js"
+        filename: "bundle.js",
+        sourceMapFilename: 'bundle.js.map'
     },
     module: {
         loaders: [
@@ -27,7 +29,18 @@ module.exports = {
             { test: /\.scss$/, loaders: ["style", "css", "sass"] }
         ]
     },
+    devtool: 'sourcemap',
     plugins: [
-        new HtmlWebpackPlugin(htmlWebpackOptions)
+        new HtmlWebpackPlugin(htmlWebpackOptions),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          },
+          output: {
+            comments: false,
+            semicolons: true
+          },
+          sourceMap: true
+        })
     ]
 };
